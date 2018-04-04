@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+	 <div class="ui huge header">New Blog</div>
+	 <form class="ui form" action="/dogs" method="POST" >
+	 	 <div class="filed">
+	 	 	 <label>Name</label>
+	 	 	 <input type="text" name="dog[name]" placeholder="name">
+	 	 </div>
+	 	 <div class="filed">
+	 	 	 <label>Image</label>
+	 	 	 <input type="text" name="dog[image]" placeholder="image">
+	 	 </div>
+	 	 <div class="filed">
+	 	 	 <label>Age</label>
+	 	 	 <input type="text" name="dog[age]" placeholder="age">
+	 	 </div>
+	 	 	 	 <div class="filed">
+	 	 	 <label>His Cool Story</label>
+	 	 	 <textarea name="dog[description]"></textarea>
+	 	 </div>
+	 	 <button class="ui violet big basic button">Submit!</button>
+	 </form>
+</div>
+
+<% include ./partials/footer %>

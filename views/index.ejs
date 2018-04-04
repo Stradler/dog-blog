@@ -1,0 +1,40 @@
+<% include ./partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">RESTFUL Dog App</div>
+    <div clas="ui top attached">
+        <div class="ui divided items">
+            <% if(dogs.length <= 0){ %>
+              <div class="ui stacked segment">
+                <h4>Please, Use "Add Header" Button At The Top To Create First Dog!</h1>  
+              </div>
+              
+            <% } else { %> 
+            
+            <% dogs.forEach(function(dog){ %>
+
+            <div class="item">
+              <div class="image">
+                <img src="<%= dog.image %>">  
+              </div>
+              <div class="content">
+                <a href="/blogs/<%= dog._id %>" class="header"><%= dog.name %></a>
+
+                <div class="description">
+                  <p><%- dog.description.substring(0, 100) %>...</p>
+                  <div class="extras">
+                     <a class="ui floated basic violet button" href="/dogs/<%= dog._id %>">More Info
+                     <i class="right chevron icon"></i>
+                     </a> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <% })} %>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ./partials/footer %>
